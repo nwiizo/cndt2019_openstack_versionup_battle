@@ -10,7 +10,8 @@ ConoHaを利用 `メモリ 8GB/CPU 6Core Ubuntu 18.04.2 LTS`プランを利用
 ```
 useradd -s /bin/bash -d /opt/stack -m stack
 echo "stack ALL=(ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/stack
-su - stack```
+su - stack
+```
 
 ## [devstack](https://github.com/openstack/devstack/blob/master/README.rst)のインストール及び実行による[Ocata](https://www.openstack.org/software/ocata/)のインストール
 ### リポジトリの引き込み
