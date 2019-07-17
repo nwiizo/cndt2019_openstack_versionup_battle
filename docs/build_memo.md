@@ -33,7 +33,6 @@ EOF
 ```
 ### 実行
 ```
-git checkout stable/ocata
 FORCE=yes ./stack.sh
 ```
 
