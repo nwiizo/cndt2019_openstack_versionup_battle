@@ -86,6 +86,10 @@ scrape_configs:
       - targets:
         - http://*.*.*.*/dashboard # Target to probe with dashboard.
         - http://*.*.*.*/identity/v3/ # Target to probe with identity.
+        - http://*.*.*.*:8774 # nova
+        - http://*.*.*.*:9696 # networ
+        - pepabo.com
+        - www.gmo.jp
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
