@@ -1,4 +1,8 @@
-このコマンドでとりあえず、動作する。
+# [tempest](https://github.com/openstack/tempest) でのテスト
+下記にて動作確認
 ```
-tox -e smoke
+# pwd
+/opt/stack/tempest
+# tox -e smoke
 ```
+時間があればドキュメント記載する。
