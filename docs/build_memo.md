@@ -3,7 +3,7 @@
 
 # 構成情報
 ## VPS 一台
-ConoHaを利用 `メモリ 8GB/CPU 6Core CentOS LTS`プランを利用
+ConoHaを利用 `メモリ 8GB/CPU 6Core CentOS Linux release 7.6 LTS`プランを利用
 
 # [devstack](https://docs.openstack.org/devstack/latest/)の利用した構築
 ## ユーザーの追加及び変更
