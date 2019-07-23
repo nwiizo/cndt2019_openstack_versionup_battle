@@ -6,6 +6,12 @@
 ConoHaを利用 `メモリ 8GB/CPU 6Core CentOS Linux release 7.6 LTS`プランを利用
 
 # [devstack](https://docs.openstack.org/devstack/latest/)の利用した構築
+## いろいろ問題があるのでIPｖ6を殺す
+```
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6 = 1
+```
+
 ## ユーザーの追加及び変更
 ```
 useradd -s /bin/bash -d /opt/stack -m stack
