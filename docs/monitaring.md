@@ -54,9 +54,23 @@ docker run --rm -d -p 9115:9115 prom/blackbox-exporter:master
 ```
 ## [Prometheus](https://prometheus.io/docs/prometheus/latest/installation/)
 ```
-docker run -p 9090:9090 -v /tmp/prometheus.yml:/etc/prometheus/prometheus.yml \
-       prom/prometheus
+$ git clone https://github.com/coreos/kube-prometheus 
+$ cd kube-prometheus 
+$ kubectl create -f manifests/
+
+# It can take a few seconds for the above 'create manifests' command to fully create the following resources, so verify the resources are ready before proceeding.
+$ until kubectl get customresourcedefinitions servicemonitors.monitoring.coreos.com ; do date; sleep 1; echo ""; done
+$ until kubectl get servicemonitors --all-namespaces ; do date; sleep 1; echo ""; done
+
+$ kubectl apply -f manifests/
+kubectl apply -f bundle.yaml
 ```
+```
+$ git clone https://github.com/coreos/prometheus-operator
+$ cd prometheus-operator
+$ kubectl apply -f bundle.yaml
+```
+
 ```
 global:
   scrape_interval: 15s
