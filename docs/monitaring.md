@@ -52,6 +52,8 @@ apt-get install python-prometheus-client
 ```
 docker run --rm -d -p 9115:9115 prom/blackbox-exporter:master
 ```
+この辺を参照にする
+https://github.com/helm/charts/tree/master/stable/prometheus-blackbox-exporter
 ## [Prometheus](https://prometheus.io/docs/prometheus/latest/installation/)
 ```
 $ git clone https://github.com/coreos/kube-prometheus 
